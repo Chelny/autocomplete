@@ -1,0 +1,16 @@
+<div class="autocomplete-wrapper form-control" [class.disabled]="disabled" [class.loading]="!items" [class.invalid-control]="invalidControl">
+  <ul class="model">
+    <!-- Selected items (model) -->
+    <li *ngFor="let item of model" class="item" [innerHTML]="item.name" (click)="removeItem(item)" aria-label="Click to remove item"></li>
+
+    <!-- Input -->
+    <li class="control-wrapper">
+      <input type="text" autocomplete="off" [disabled]="disabled" #controlRef>
+    </li>
+  </ul>
+
+  <!-- Result based on query -->
+  <ul *ngIf="result.length > 0" class="result-list" #resultRef>
+    <li *ngFor="let suggestion of result; let i = index" [class.max-selection-reached]="maxItemsCount > 0 && model.length >= maxItemsCount" [innerHTML]="suggestion.name | boldText:query" tabindex="{{i+1}}" (click)="selectItem(suggestion)" (mouseenter)="onMouseenter($event)"></li>
+  </ul>
+</div>
