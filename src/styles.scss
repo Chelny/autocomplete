@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Loading - animated stripes
+.loading {
+  background-image: repeating-linear-gradient(-45deg, #eaeaea, #eaeaea 25px, #cccccc 25px, #cccccc 50px);
+  background-size: 150% 100%;
+  -webkit-animation: progress 2s linear infinite;
+  -moz-animation: progress 2s linear infinite;
+  -ms-animation: progress 2s linear infinite;
+  animation: progress 2s linear infinite;
+  pointer-events: none;
+}
+
+@-webkit-keyframes progress {
+  0% { background-position: 0 0; }
+  100% { background-position: -75px 0px; }
+}
+
+@-moz-keyframes progress {
+  0% { background-position: 0 0; }
+  100% { background-position: -75px 0px; }
+}    
+
+@-ms-keyframes progress {
+  0% { background-position: 0 0; }
+  100% { background-position: -75px 0px; }
+}   
+
+@keyframes progress {
+  0% { background-position: 0 0; }
+  100% { background-position: -70px 0px; }
+} 
