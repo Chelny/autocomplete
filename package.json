@@ -1,6 +1,13 @@
 {
   "name": "autocomplete",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Autocomplete input",
+  "author": {
+    "name": "Chelny Duplan",
+    "twitter": "@Chelny",
+    "url": "http://github.com/Chelny"
+  },
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
